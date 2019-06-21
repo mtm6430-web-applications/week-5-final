@@ -1,7 +1,11 @@
 <template>
   <div>
     <h1>Todo List</h1>
-    <TodoForm @newTodo="addTodo" />
+    <TodoForm @newTodo="addTodo">
+      <!-- <h2>Add a Todo</h2> -->
+      <h2 slot="label">Add a Todo</h2>
+      <small slot="desc">Your Todos will be saved</small>
+    </TodoForm>
     <Todo :todos="todoList" @removeTodo="appDeleteTodo" />
   </div>
 </template>
